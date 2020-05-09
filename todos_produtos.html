@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Real Confecções</title>
+	<meta charset="utf-8">
+	<link rel="icon" href="images/carretel.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/carrinho.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myDiv div").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+    </script>
+  
+</head>
+<body style="padding-top: 75px; background-color: lightslategrey;" >
+	
+	<nav class = "navbar navbar-expand-md fixed-top navbar-dark bg-dark" style="margin-bottom: 500px;">
+
+		<img src="images/carretel.png" style="width: 20px; height: 20px;">&nbsp;
+		<a class ="navbar-brand" href="index.html">Real Confecções</a>
+
+		<ul class="navbar-nav mr-auto">
+		<li class="nav-item active::marker">
+			<a class="nav-link" href="index.html">Página Inicial</a>
+		</li>
+		<li class="nav-item dropdown">
+		      <a class="nav-link dropdown-toggle" href="categorias.html" id="navbardrop" data-toggle="dropdown">
+		        Categorias
+		      </a>
+		      <div class="dropdown-menu" style="text-align: center">
+		        <a class="dropdown-item" href="conjunto_de_cozinha.html">Cozinha</a>
+		        <a class="dropdown-item" href="jogos_de_banheiro.html">Banheiro</a>
+		        <a class="dropdown-item" href="tapetes_avulsos.html">Tapetes</a>
+		        <a class="dropdown-item" href="outros.html">Outros</a>
+		      </div>
+		    </li>
+		<li class="nav-item active:marker">
+			<a class="nav-link" href="personalizep1.html">Personalize
+			</a>
+		</li>
+		<li class="nav-item active::marker">
+			<a class="nav-link" href="contato.html">Contato
+			</a>
+		</li>
+		<li class="nav-item active::marker">
+			<a class="nav-link" href="sobre.html">Sobre
+			</a>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="" id="navbardrop" data-toggle="dropdown">
+			  Suporte
+			</a>
+			<div class="dropdown-menu" style="text-align: center">
+			  <a class="dropdown-item" href="ajuda.html">Ajuda</a>
+			  <a class="dropdown-item" href="termos_condicoes.html">Termos e condições de uso</a>
+			  <a class="dropdown-item" href="politica_privacidade.html">Política de privacidade</a>
+			</div>
+		</li>
+
+		<ul class="navbar-nav mr-auto" style="margin-left: 231px;">
+
+		<li class="nav-item dropdown">
+		      <a class="nav-link dropdown-toggle" href="perfil.html" id="navbardrop" data-toggle="dropdown">
+		      	<span class="fa fa-user-o"></span>
+		      </a>
+		      <div class="dropdown-menu">
+		        <a class="dropdown-item" href="meus_pedidos.html"><span class="fa fa-sign-in"></span>&nbsp;Login</a>
+		        <a class="dropdown-item" href="cadastro_usuario.html"><span class="fa fa-user-plus"></span>&nbsp;Cadastro de usuário</a>
+                <a class="dropdown-item" href="perfil.html"><span class="fa fa-vcard">&nbsp;Meu perfil</span></a>
+                <a class="dropdown-item" href="meus_pedidos.html"><span class="fa fa-tasks"></span>&nbsp;Meus pedidos</a>
+		        <a class="dropdown-item" href="login_usuario.html"><span class="fa fa-sign-out"></span>&nbsp;Sair</a>
+		      </div>
+		    </li>	
+
+            <form class="form-inline">
+                    <input id="myInput" class="form-control mr-sm-2" type="text" placeholder="Procurar">
+                <a button class="btn btn-secondary" type="submit" href="todos_produtos.html"><span class="fa fa-search"></span></button></a>
+              </form>
+		  
+		  <li class="nav-item">
+			<a class="nav-link" href="carrinho.html">
+				<span class="fa fa-cart-arrow-down"></span>
+					<span class="badge badge-secondary">4</span>
+			</a>
+		</li>
+        </ul>
+  	</ul>
+</div>
+
+	</nav>
+		
+		<main class="container-fluid" style="text-align: center;">
+			
+            <p><h2>Procure por um produto!</h2></p>
+            
+            <div id="myDiv" style="text-align: center; display: inline-block; margin-left: 320px; margin-bottom: 50px;">		
+
+                    <br>
+                    <table>
+                    
+                    <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                        <form action="carrinho.html">
+                        <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/conjuntocozinha1.jpg">
+                        <p>Conjunto de Cozinha Acid</p>
+                        <p>R$12,00</p>
+                        <button type="button" onclick="adicionarItemCarrinho(100, src=images/conjuntocozinha1.jpg, 'Conjunto de Cozinha Acid', 'R$12,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                        </form>
+                    </div>
+            
+                    <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                    <form action="carrinho.html">
+                        <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/conjuntocozinha2.jpg">
+                        <p>Conjunto de Cozinha Covert</p>
+                        <p>R$12,00</p>
+                        <button type="button" onclick="adicionarItemCarrinho(101, src=images/conjuntocozinha2.jpg, 'Conjunto de Cozinha Covert', 'R$12,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                    </form>
+                    </div>
+                
+                    <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                    <form action="carrinho.html">
+                        <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/conjuntocozinha3.jpg">
+                        <p>Conjunto de Cozinha Ziman</p>
+                        <p>R$12,00</p>
+                        <button type="button" onclick="adicionarItemCarrinho(102, src=images/conjuntocozinha3.jpg, 'Conjunto de Cozinha Ziman', 'R$12,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                    </form>
+                    </div>
+            
+                    <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                        <form action="carrinho.html">
+                            <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/conjuntocozinha1.jpg">
+                            <p>Conjunto de Cozinha Acid</p>
+                            <p>R$12,00</p>
+                            <button type="button" onclick="adicionarItemCarrinho(103, src=images/conjuntocozinha1.jpg, 'Conjunto de Cozinha Acid', 'R$12,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                        </form>
+                        </div>
+                
+                        <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                        <form action="carrinho.html">
+                            <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/conjuntocozinha2.jpg">
+                            <p>Conjunto de Cozinha Covert</p>
+                            <p>R$12,00</p>
+                            <button type="button" onclick="adicionarItemCarrinho(104, src=images/conjuntocozinha2.jpg, 'Conjunto de Cozinha Covert', 'R$12,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                        </form>
+                        </div>
+                    
+                        <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                        <form action="carrinho.html">
+                            <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/conjuntocozinha3.jpg">
+                            <p>Conjunto de Cozinha Ziman</p>
+                            <p>R$12,00</p>
+                            <button type="button" onclick="adicionarItemCarrinho(105, src=images/conjuntocozinha3.jpg, 'Conjunto de Cozinha Ziman', 'R$12,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                        </form>
+                        </div>
+            
+                        <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                            <form action="carrinho.html">
+                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/conjuntocozinha1.jpg">
+                                <p>Conjunto de Cozinha Acid</p>
+                                <p>R$12,00</p>
+                                <button type="button" onclick="adicionarItemCarrinho(106, src=images/conjuntocozinha1.jpg, 'Conjunto de Cozinha Acid', 'R$12,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                            </form>
+                            </div>
+                    
+                            <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                            <form action="carrinho.html">
+                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/conjuntocozinha2.jpg">
+                                <p>Conjunto de Cozinha Covert</p>
+                                <p>R$12,00</p>
+                                <button type="button" onclick="adicionarItemCarrinho(107, src=images/conjuntocozinha2.jpg, 'Conjunto de Cozinha Covert', 'R$12,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                            </form>
+                            </div>
+                        
+                            <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                            <form action="carrinho.html">
+                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/conjuntocozinha3.jpg">
+                                <p>Conjunto de Cozinha Ziman</p>
+                                <p>R$12,00</p>
+                                <button type="button" onclick="adicionarItemCarrinho(108, src=images/conjuntocozinha3.jpg, 'Conjunto de Cozinha Ziman', 'R$12,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                            </form>
+                            </div>
+            
+                            <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                <form action="carrinho.html">
+                                    <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/conjuntocozinha1.jpg">
+                                    <p>Conjunto de Cozinha Acid</p>
+                                    <p>R$12,00</p>
+                                    <button type="button" onclick="adicionarItemCarrinho(109, src=images/conjuntocozinha1.jpg, 'Conjunto de Cozinha Acid', 'R$12,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                </form>
+                                </div>
+                        
+                                <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                <form action="carrinho.html">
+                                    <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/conjuntocozinha2.jpg">
+                                    <p>Conjunto de Cozinha Covert</p>
+                                    <p>R$12,00</p>
+                                    <button type="button" onclick="adicionarItemCarrinho(110, src=images/conjuntocozinha2.jpg, 'Conjunto de Cozinha Covert', 'R$12,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                </form>
+                                </div>
+                            
+                                <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                <form action="carrinho.html">
+                                    <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/conjuntocozinha3.jpg">
+                                    <p>Conjunto de Cozinha Ziman</p>
+                                    <p>R$12,00</p>
+                                    <button type="button" onclick="adicionarItemCarrinho(111, src=images/conjuntocozinha3.jpg, 'Conjunto de Cozinha Ziman', 'R$12,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                </form>
+                                </div>
+
+                        <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+						<form action="carrinho.html">
+						<img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/jogodebanheirocru.jpg">
+						<p>Conjunto de Banheiro<br>Cru</p>
+						<p>R$10,00</p>
+						<button type="button" onclick="adicionarItemCarrinho(112, src=images/jogodebanheirocru.jpg, 'Conjunto de Banheiro Cru', 'R$10,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+						</form>
+						</div>
+					
+						<div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+						<form action="carrinho.html">
+						<img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/jogodebanheirofofao.jpg">
+						<p>Conjunto de Banheiro<br>Fofão</p>
+						<p>R$10,00</p>
+						<button type="button" onclick="adicionarItemCarrinho(112, src=images/jogodebanheirofofao.jpg, 'Conjunto de Banheiro Fofão', 'R$10,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+						</form>
+						</div>
+					
+						<div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+						<form action="carrinho.html">
+						<img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/jogodebanheirorustico.jpg">
+						<p>Conjunto de Banheiro<br>Rústico</p>
+						<p>R$10,00</p>
+						<button type="button" onclick="adicionarItemCarrinho(113, src=images/jogodebanheirorustico.jpg, 'Conjunto de Banheiro Rústico', 'R$10,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+						</form>
+                        </div>
+                        
+                        <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                <form action="carrinho.html">
+                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/jogodebanheirocru.jpg">
+                                <p>Conjunto de Banheiro<br>Cru</p>
+                                <p>R$10,00</p>
+                                <button type="button" onclick="adicionarItemCarrinho(114, src=images/jogodebanheirocru.jpg, 'Conjunto de Banheiro Cru', 'R$10,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                </form>
+                                </div>
+                            
+                                <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                <form action="carrinho.html">
+                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/jogodebanheirofofao.jpg">
+                                <p>Conjunto de Banheiro<br>Fofão</p>
+                                <p>R$10,00</p>
+                                <button type="button" onclick="adicionarItemCarrinho(115, src=images/jogodebanheirofofao.jpg, 'Conjunto de Banheiro Fofão', 'R$10,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                </form>
+                                </div>
+                            
+                                <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                <form action="carrinho.html">
+                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/jogodebanheirorustico.jpg">
+                                <p>Conjunto de Banheiro<br>Rústico</p>
+                                <p>R$10,00</p>
+                                <button type="button" onclick="adicionarItemCarrinho(116, src=images/jogodebanheirorustico.jpg, 'Conjunto de Banheiro Rústico', 'R$10,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                </form>
+                                </div>
+
+                                <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                        <form action="carrinho.html">
+                                        <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/jogodebanheirocru.jpg">
+                                        <p>Conjunto de Banheiro<br>Cru</p>
+                                        <p>R$10,00</p>
+                                        <button type="button" onclick="adicionarItemCarrinho(117, src=images/jogodebanheirocru.jpg, 'Conjunto de Banheiro Cru', 'R$10,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                        </form>
+                                        </div>
+                                    
+                                        <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                        <form action="carrinho.html">
+                                        <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/jogodebanheirofofao.jpg">
+                                        <p>Conjunto de Banheiro<br>Fofão</p>
+                                        <p>R$10,00</p>
+                                        <button type="button" onclick="adicionarItemCarrinho(118, src=images/jogodebanheirofofao.jpg, 'Conjunto de Banheiro Fofão', 'R$10,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                        </form>
+                                        </div>
+                                    
+                                        <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                        <form action="carrinho.html">
+                                        <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/jogodebanheirorustico.jpg">
+                                        <p>Conjunto de Banheiro<br>Rústico</p>
+                                        <p>R$10,00</p>
+                                        <button type="button" onclick="adicionarItemCarrinho(119, src=images/jogodebanheirorustico.jpg, 'Conjunto de Banheiro Rústico', 'R$10,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                        </form>
+                                        </div>
+                                    
+                                        <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                                <form action="carrinho.html">
+                                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/jogodebanheirocru.jpg">
+                                                <p>Conjunto de Banheiro<br>Cru</p>
+                                                <p>R$10,00</p>
+                                                <button type="button" onclick="adicionarItemCarrinho(120, src=images/jogodebanheirocru.jpg, 'Conjunto de Banheiro Cru', 'R$10,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                </form>
+                                                </div>
+                                            
+                                                <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                                <form action="carrinho.html">
+                                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/jogodebanheirofofao.jpg">
+                                                <p>Conjunto de Banheiro<br>Fofão</p>
+                                                <p>R$10,00</p>
+                                                <button type="button" onclick="adicionarItemCarrinho(121, src=images/jogodebanheirofofao.jpg, 'Conjunto de Banheiro Fofão', 'R$10,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                </form>
+                                                </div>
+                                            
+                                                <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                                <form action="carrinho.html">
+                                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/jogodebanheirorustico.jpg">
+                                                <p>Conjunto de Banheiro<br>Rústico</p>
+                                                <p>R$10,00</p>
+                                                <button type="button" onclick="adicionarItemCarrinho(122, src=images/jogodebanheirorustico.jpg, 'Conjunto de Banheiro Rústico', 'R$10,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                </form>
+                                                </div>
+
+                                                <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                                        <form action="carrinho.html">
+                                                        <img class="img-thumbnail" src="images/caminhodemesa2.jpg" style="width: 200px; height: 200px;">
+                                                        <p>Caminho de Mesa<br>Tapão</p>
+                                                        <p>R$5,00</p>
+                                                        <button type="button" onclick="adicionarItemCarrinho(123, src=images/caminhodemesa2.jpg, 'Caminho de Mesa Tapão', 'R$5,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                        </form>
+                                                        </div>
+                                                        
+                                                        <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                                        <form action="carrinho.html">
+                                                        <img class="img-thumbnail" src="images/capadagua.jpg" style="width: 200px; height: 200px;">
+                                                        <p>Capa D'agua<br>Cruzeiro</p>
+                                                        <p>R$8,00</p>
+                                                        <button type="button" onclick="adicionarItemCarrinho(124, src=images/capadagua.jpg, 'Capa Dágua Cruzeiro', 'R$8,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                        </form>
+                                                        </div>
+                                            
+                                                        <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                                        <form action="carrinho.html">
+                                                        <img class="img-thumbnail" src="images/caminhodemesa2.jpg" style="width: 200px; height: 200px;">
+                                                        <p>Caminho de Mesa<br>Tapão</p>
+                                                        <p>R$5,00</p>
+                                                        <button type="button" onclick="adicionarItemCarrinho(125, src=images/caminhodemesa2.jpg, 'Caminho de Mesa Tapão', 'R$5,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                        </form>
+                                                        </div>
+                                                        
+                                                        <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                                        <form action="carrinho.html">
+                                                        <img class="img-thumbnail" src="images/capadagua.jpg" style="width: 200px; height: 200px;">
+                                                        <p>Capa D'agua<br>Cruzeiro</p>
+                                                        <p>R$8,00</p>
+                                                        <button type="button" onclick="adicionarItemCarrinho(126, src=images/capadagua.jpg, 'Capa Dagua Cruzeiro', 'R$8,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                        </form>
+                                                        </div>
+                                            
+                                                        <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                                        <form action="carrinho.html">
+                                                        <img class="img-thumbnail" src="images/caminhodemesa2.jpg" style="width: 200px; height: 200px;">
+                                                        <p>Caminho de Mesa<br>Tapão</p>
+                                                        <p>R$5,00</p>
+                                                        <button type="button" onclick="adicionarItemCarrinho(127, src=images/caminhodemesa2.jpg, 'Caminho de Mesa Tapão', 'R$5,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                        </form>
+                                                        </div>
+                                                        
+                                                        <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                                        <form action="carrinho.html">
+                                                        <img class="img-thumbnail" src="images/capadagua.jpg" style="width: 200px; height: 200px;">
+                                                        <p>Capa D'agua<br>Cruzeiro</p>
+                                                        <p>R$8,00</p>
+                                                        <button type="button" onclick="adicionarItemCarrinho(128, src=images/capadagua.jpg, 'Capa Dagua Cruzeiro', 'R$8,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                        </form>
+                                                        </div>
+                                            
+                                                        <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                                        <form action="carrinho.html">
+                                                        <img class="img-thumbnail" src="images/caminhodemesa2.jpg" style="width: 200px; height: 200px;">
+                                                        <p>Caminho de Mesa<br>Tapão</p>
+                                                        <p>R$5,00</p>
+                                                        <button type="button" onclick="adicionarItemCarrinho(129, src=images/caminhodemesa2.jpg, 'Caminho de Mesa Tapão', 'R$5,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                        </form>
+                                                        </div>
+                                                        
+                                                        <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                                        <form action="carrinho.html">
+                                                        <img class="img-thumbnail" src="images/capadagua.jpg" style="width: 200px; height: 200px;">
+                                                        <p>Capa D'agua<br>Cruzeiro</p>
+                                                        <p>R$8,00</p>
+                                                        <button type="button" onclick="adicionarItemCarrinho(130, src=images/capadagua.jpg, 'Capa Dagua Cruzeiro', 'R$8,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                        </form>
+                                                        </div>
+                                            
+                                                        <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                                        <form action="carrinho.html">
+                                                        <img class="img-thumbnail" src="images/caminhodemesa2.jpg" style="width: 200px; height: 200px;">
+                                                        <p>Caminho de Mesa<br>Tapão</p>
+                                                        <p>R$5,00</p>
+                                                        <button type="button" onclick="adicionarItemCarrinho(131, src=images/caminhodemesa2.jpg, 'Caminho de Mesa Tapão', 'R$5,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                        </form>
+                                                        </div>
+                                                        
+                                                        <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                                        <form action="carrinho.html">
+                                                        <img class="img-thumbnail" src="images/capadagua.jpg" style="width: 200px; height: 200px;">
+                                                        <p>Capa D'agua<br>Cruzeiro</p>
+                                                        <p>R$8,00</p>
+                                                        <button type="button" onclick="adicionarItemCarrinho(132, src=images/capadagua.jpg, 'Capa Dagua Cruzeiro', 'R$8,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                        </form>
+                                                        </div>
+                                            
+                                                        <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                                        <form action="carrinho.html">
+                                                        <img class="img-thumbnail" src="images/caminhodemesa2.jpg" style="width: 200px; height: 200px;">
+                                                        <p>Caminho de Mesa<br>Tapão</p>
+                                                        <p>R$5,00</p>
+                                                        <button type="button" onclick="adicionarItemCarrinho(133, src=images/caminhodemesa2.jpg, 'Caminho de Mesa Tapão', 'R$5,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                        </form>
+                                                        </div>
+                                                        
+                                                        <div style="margin-right: 50px; margin-bottom: 50px; float: left;">
+                                                        <form action="carrinho.html">
+                                                        <img class="img-thumbnail" src="images/capadagua.jpg" style="width: 200px; height: 200px;">
+                                                        <p>Capa D'agua<br>Cruzeiro</p>
+                                                        <p>R$8,00</p>
+                                                        <button type="button" onclick="adicionarItemCarrinho(134, src=images/capadagua.jpg, 'Capa Dagua Cruzeiro', 'R$8,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                        </form>
+                                                        </div>
+
+                                                        <div style="margin-right: 60px; margin-bottom: 50px; float: left;">
+                                                                <form action="carrinho.html">
+                                                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/tapetesavulsos.jpg">
+                                                                <p>Tapete Chão-Chão</p>
+                                                                <p>R$10,00</p>
+                                                                <form action="cadastro_de_informacoes.html">
+                                                                <button type="button" onclick="adicionarItemCarrinho(135, src=images/tapetesavulsos.jpg, 'Tapete Chão-Chão', 'R$10,00');"  class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                                </form>
+                                                                </div>
+                                                    
+                                                                <div style="margin-right: 60px; margin-bottom: 50px; float: left;">
+                                                                <form action="carrinho.html">
+                                                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/tapetesavulsos.jpg">
+                                                                <p>Tapete Chão-Chão</p>
+                                                                <p>R$10,00</p>
+                                                                <form action="cadastro_de_informacoes.html">
+                                                                <button type="button" onclick="adicionarItemCarrinho(136, src=images/tapetesavulsos.jpg, 'Tapete Chão-Chão', 'R$10,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                                </form>
+                                                                </div>
+                                                    
+                                                                <div style="margin-right: 60px; margin-bottom: 50px; float: left;">
+                                                                <form action="carrinho.html">
+                                                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/tapetesavulsos.jpg">
+                                                                <p>Tapete Chão-Chão</p>
+                                                                <p>R$10,00</p>
+                                                                <form action="cadastro_de_informacoes.html">
+                                                                <button type="button" onclick="adicionarItemCarrinho(137, src=images/tapetesavulsos.jpg, 'Tapete Chão-Chão', 'R$10,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                                </form>
+                                                                </div>
+                                                    
+                                                                <div style="margin-right: 60px; margin-bottom: 50px; float: left;">
+                                                                <form action="carrinho.html">
+                                                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/tapetesavulsos.jpg">
+                                                                <p>Tapete Chão-Chão</p>
+                                                                <p>R$10,00</p>
+                                                                <form action="cadastro_de_informacoes.html">
+                                                                <button type="button" onclick="adicionarItemCarrinho(138, src=images/tapetesavulsos.jpg, 'Tapete Chão-Chão', 'R$10,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                                </form>
+                                                                </div>
+                                                    
+                                                                <div style="margin-right: 60px; margin-bottom: 50px; float: left;">
+                                                                <form action="carrinho.html">
+                                                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/tapetesavulsos.jpg">
+                                                                <p>Tapete Chão-Chão</p>
+                                                                <p>R$10,00</p>
+                                                                <form action="cadastro_de_informacoes.html">
+                                                                <button type="button" onclick="adicionarItemCarrinho(139, src=images/tapetesavulsos.jpg, 'Tapete Chão-Chão', 'R$10,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                                </form>
+                                                                </div>
+                                                    
+                                                                <div style="margin-right: 60px; margin-bottom: 50px; float: left;">
+                                                                <form action="carrinho.html">
+                                                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/tapetesavulsos.jpg">
+                                                                <p>Tapete Chão-Chão</p>
+                                                                <p>R$10,00</p>
+                                                                <form action="cadastro_de_informacoes.html">
+                                                                <button type="button" onclick="adicionarItemCarrinho(140, src=images/tapetesavulsos.jpg, 'Tapete Chão-Chão', 'R$10,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                                </form>
+                                                                </div>
+                                                    
+                                                                <div style="margin-right: 60px; margin-bottom: 50px; float: left;">
+                                                                <form action="carrinho.html">
+                                                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/tapetesavulsos.jpg">
+                                                                <p>Tapete Chão-Chão</p>
+                                                                <p>R$10,00</p>
+                                                                <form action="cadastro_de_informacoes.html">
+                                                                <button type="button" onclick="adicionarItemCarrinho(141, src=images/tapetesavulsos.jpg, 'Tapete Chão-Chão', 'R$10,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                                </form>
+                                                                </div>
+                                                    
+                                                                <div style="margin-right: 60px; margin-bottom: 50px; float: left;">
+                                                                <form action="carrinho.html">
+                                                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/tapetesavulsos.jpg">
+                                                                <p>Tapete Chão-Chão</p>
+                                                                <p>R$10,00</p>
+                                                                <form action="cadastro_de_informacoes.html">
+                                                                <button type="button" onclick="adicionarItemCarrinho(142, src=images/tapetesavulsos.jpg, 'Tapete Chão-Chão', 'R$10,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                                </form>
+                                                                </div>
+                                                    
+                                                                <div style="margin-right: 60px; margin-bottom: 50px; float: left;">
+                                                                <form action="carrinho.html">
+                                                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/tapetesavulsos.jpg">
+                                                                <p>Tapete Chão-Chão</p>
+                                                                <p>R$10,00</p>
+                                                                <form action="cadastro_de_informacoes.html">
+                                                                <button type="button" onclick="adicionarItemCarrinho(143, src=images/tapetesavulsos.jpg, 'Tapete Chão-Chão', 'R$10,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                                </form>
+                                                                </div>
+                                                    
+                                                                <div style="margin-right: 60px; margin-bottom: 50px; float: left;">
+                                                                <form action="carrinho.html">
+                                                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/tapetesavulsos.jpg">
+                                                                <p>Tapete Chão-Chão</p>
+                                                                <p>R$10,00</p>
+                                                                <form action="cadastro_de_informacoes.html">
+                                                                <button type="button" onclick="adicionarItemCarrinho(144, src=images/tapetesavulsos.jpg, 'Tapete Chão-Chão', 'R$10,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                                </form>
+                                                                </div>
+                                                    
+                                                                <div style="margin-right: 60px; margin-bottom: 50px; float: left;">
+                                                                <form action="carrinho.html">
+                                                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/tapetesavulsos.jpg">
+                                                                <p>Tapete Chão-Chão</p>
+                                                                <p>R$10,00</p>
+                                                                <form action="cadastro_de_informacoes.html">
+                                                                <button type="button" onclick="adicionarItemCarrinho(145, src=images/tapetesavulsos.jpg, 'Tapete Chão-Chão', 'R$10,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                                </form>
+                                                                </div>
+                                                    
+                                                                <div style="margin-right: 60px; margin-bottom: 50px; float: left;">
+                                                                <form action="carrinho.html">
+                                                                <img class="img-thumbnail" style="width: 200px; height: 200px;" src="images/tapetesavulsos.jpg">
+                                                                <p>Tapete Chão-Chão</p>
+                                                                <p>R$10,00</p>
+                                                                <form action="cadastro_de_informacoes.html">
+                                                                <button type="button" onclick="adicionarItemCarrinho(146, src=images/tapetesavulsos.jpg, 'Tapete Chão-Chão', 'R$10,00');" class="btn btn-primary">Adicionar ao carrinho&nbsp<span class="fa fa-cart-plus"></span></button>
+                                                                </form>
+                                                                </div>
+                                                                </table>
+
+			</div>
+
+                    
+                    </div>
+
+			
+		</main>
+
+	<footer class="container-fluid" style="text-align: center; margin-top: 20px;">
+		<hr>
+		<p>
+			@<a href="https://www.instagram.com/gabriel.olra/?hl=pt-br" target="_blank" style="color: black;">gabriel.olra</a>
+			&
+			@<a href="https://www.instagram.com/dayanesantana18/" target="_blank" style="color: black;">dayanesantana18</a>
+		</p>
+    </footer>
+
+</body>
+</html>

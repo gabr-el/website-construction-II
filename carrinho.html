@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Carrinho</title>
+	<meta charset="utf-8">
+	<link rel="icon" href="images/carretel.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/carrinho.js"></script>
+
+	<script>
+
+		$(document).ready(function() {
+			recuperarItemCarrinho();
+		});
+
+	</script>
+	
+</head>
+<body style="padding-top: 100px; background-color: lightslategrey;">
+	
+	<nav class = "navbar navbar-expand-md fixed-top navbar-dark bg-dark" style="margin-bottom: 500px;">
+
+		<img src="images/carretel.png" style="width: 20px; height: 20px;">&nbsp;
+		<a class ="navbar-brand" href="index.html">Real Confecções</a>
+
+		<ul class="navbar-nav mr-auto">
+		<li class="nav-item active::marker">
+			<a class="nav-link" href="index.html">Página Inicial</a>
+		</li>
+		<li class="nav-item dropdown">
+		      <a class="nav-link dropdown-toggle" href="categorias.html" id="navbardrop" data-toggle="dropdown">
+		        Categorias
+		      </a>
+		      <div class="dropdown-menu" style="text-align: center">
+		        <a class="dropdown-item" href="conjunto_de_cozinha.html">Cozinha</a>
+		        <a class="dropdown-item" href="jogos_de_banheiro.html">Banheiro</a>
+		        <a class="dropdown-item" href="tapetes_avulsos.html">Tapetes</a>
+		        <a class="dropdown-item" href="outros.html">Outros</a>
+		      </div>
+		    </li>
+		<li class="nav-item active:marker">
+			<a class="nav-link" href="personalizep1.html">Personalize
+			</a>
+		</li>
+		<li class="nav-item active::marker">
+			<a class="nav-link" href="contato.html">Contato
+			</a>
+		</li>
+		<li class="nav-item active::marker">
+			<a class="nav-link" href="sobre.html">Sobre
+			</a>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="" id="navbardrop" data-toggle="dropdown">
+			  Suporte
+			</a>
+			<div class="dropdown-menu" style="text-align: center">
+			  <a class="dropdown-item" href="ajuda.html">Ajuda</a>
+			  <a class="dropdown-item" href="termos_condicoes.html">Termos e condições de uso</a>
+			  <a class="dropdown-item" href="politica_privacidade.html">Política de privacidade</a>
+			</div>
+		</li>
+
+		<ul class="navbar-nav mr-auto" style="margin-left: 231px;">
+
+		<li class="nav-item dropdown">
+		      <a class="nav-link dropdown-toggle" href="perfil.html" id="navbardrop" data-toggle="dropdown">
+		      	<span class="fa fa-user-o"></span>
+		      </a>
+		      <div class="dropdown-menu">
+		        <a class="dropdown-item" href="meus_pedidos.html"><span class="fa fa-sign-in"></span>&nbsp;Login</a>
+		        <a class="dropdown-item" href="cadastro_usuario.html"><span class="fa fa-user-plus"></span>&nbsp;Cadastro de usuário</a>
+                <a class="dropdown-item" href="perfil.html"><span class="fa fa-vcard">&nbsp;Meu perfil</span></a>
+                <a class="dropdown-item" href="meus_pedidos.html"><span class="fa fa-tasks"></span>&nbsp;Meus pedidos</a>
+		        <a class="dropdown-item" href="login_usuario.html"><span class="fa fa-sign-out"></span>&nbsp;Sair</a>
+		      </div>
+		    </li>	
+
+			<form class="form-inline">
+				<input class="form-control mr-sm-2" type="text" placeholder="Procurar">
+				<a button class="btn btn-secondary" type="submit" href="todos_produtos.html"><span class="fa fa-search"></span></button></a>
+			  </form>
+		  
+		  <li class="nav-item">
+			<a class="nav-link" href="carrinho.html">
+				<span class="fa fa-cart-arrow-down"></span>
+					<span class="badge badge-secondary">4</span>
+			</a>
+		</li>
+		</ul>
+  	</ul>
+</div>
+
+	</nav>
+	
+	<main class="container-fluid">
+
+	<div style="text-align: center">
+		<h2>Carrinho</h2>
+	</div>
+	<br>
+
+	<div id="divListaItens">
+		<div class="card">
+			<div class="card-header"><b style="margin-left: 200px;">Descrição</b><b style="margin-left: 100px;">Quantidade</b><b style="margin-left: 100px;">Valor unitário</b><b style="margin-left: 100px;">Valor total</b></div>
+		</div>
+		
+	</div>
+	
+	<br>
+	
+	<div> 
+
+		<div class="card">
+			<div class="card-header"><b style="margin-left: 200px;">Descrição</b><b style="margin-left: 100px;">Quantidade</b><b style="margin-left: 100px;">Valor unitário</b><b style="margin-left: 100px;">Valor total</b></div>
+		</div>
+		
+		<div class="card">
+  			<div>
+				<img src="images/jogodebanheirocru.jpg" class="img-thumbnail" style="width: 150px; height: 150px; margin-bottom: 20px; margin-top: 20px; margin-left: 20px; margin-right: 20px;">&nbsp;Jogo de banheiro cru&nbsp;
+				<input type="number" value="1" min="1" class="card-body" style="width: 80px; height: 60px; margin-left: 50px; border-color: white;" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+				<i style="margin-left: 125px;">R$10,00</i>
+				<i style="margin-left: 130px;">R$10,00</i>
+				<span class="fa fa-trash" style="margin-left: 400px;"></span>
+			</div>
+		</div>
+		<br>
+		<div class="card">
+  			<div><img src="images/capadagua.jpg" class="img-thumbnail" style="width: 150px; height: 150px; margin-bottom: 20px; margin-top: 20px; margin-left: 20px; margin-right: 20px;">&nbsp;Capa dágua&nbsp;<input type="number" value="1" min="1" class="card-body" style="width: 80px; height: 60px; margin-left: 115px; border-color: white;" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><i style="margin-left: 125px;">R$5,00</i><i style="margin-left: 140px;">R$5,00</i><span class="fa fa-trash" style="margin-left: 409px;"></span></div>
+		</div>
+		<br>
+		<div class="card">
+  			<div><img src="images/tapetesavulsos.jpg" class="img-thumbnail" style="width: 150px; height: 150px; margin-bottom: 20px; margin-top: 20px; margin-left: 20px; margin-right: 20px;">&nbsp;Tapete avulso&nbsp;<input type="number" value="1" min="1" class="card-body" style="width: 80px; height: 60px; margin-left: 105px; border-color: white;" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><i style="margin-left: 125px;">R$10,00</i><i style="margin-left: 130px;">R$10,00</i><span class="fa fa-trash" style="margin-left: 400px;"></span></div>
+		</div>
+		<br>
+		<div class="card">
+  			<div><img src="images/conjuntocozinha1.jpg" class="img-thumbnail" style="width: 150px; height: 150px; margin-bottom: 20px; margin-top: 20px; margin-left: 20px; margin-right: 20px;">&nbsp;Conjunto de cozinha&nbsp;<input type="number" value="1" min="1" class="card-body" style="width: 80px; height: 60px; margin-left: 55px; border-color: white;" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><i style="margin-left: 125px;">R$10,00</i><i style="margin-left: 130px;">R$10,00</i><span class="fa fa-trash" style="margin-left: 400px;"></span></div>
+		</div>
+		<br>
+		<div class="card" style="width: 200px; margin-left: auto; margin-right: auto;">
+  			<div class="card-body bg-info" style="color: white">Subtotal R$35,00</div>
+  			<div class="card-body bg-info" style="color: white">Frete R$7,00</div>
+  			<div class="card-body bg-info" style="color: white">Total R$42,00</div>
+		</div>
+
+		<br>
+	
+		<form action="index.html" style="float: left; margin-left: 475px;">
+		<button class="btn btn-primary"><span class="fa fa-arrow-circle-left"></span>&nbsp;Continuar comprando</button>
+		</form>
+
+		<form action="formas_de_pagamento.html" style="float: left;">
+		<button class="btn btn-success">Concluir compra&nbsp;<span class="fa fa-check"></span></button>
+		</form>
+
+	</div>
+	
+	</main>
+	
+	<footer class="container-fluid" style="text-align: center; margin-top: 50px;">
+		<hr>
+		<p>
+			@<a href="https://www.instagram.com/gabriel.olra/?hl=pt-br" target="_blank" style="color: black;">gabriel.olra</a>
+			&
+			@<a href="https://www.instagram.com/dayanesantana18/" target="_blank" style="color: black;">dayanesantana18</a>
+		</p>
+	</footer>
+
+</body>
+</html>

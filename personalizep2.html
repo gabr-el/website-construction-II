@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personalize</title>
+	<meta charset="utf-8">
+	<link rel="icon" href="images/carretel.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<script>
+		$(function(){
+			$('#upload').change(function(){
+				const file = $(this)[0].files[0]
+				const fileReader = new FileReader()
+				fileReader.onloadend = function(){
+					$('#img').attr('src', fileReader.result)
+				}
+				fileReader.readAsDataURL(file)
+			})
+		})
+	</script>
+
+</head>
+<body style="padding-top: 50px; background-color: lightslategrey;">
+	
+	<nav class = "navbar navbar-expand-md fixed-top navbar-dark bg-dark" style="margin-bottom: 500px;">
+
+		<img src="images/carretel.png" style="width: 20px; height: 20px;">&nbsp;
+		<a class ="navbar-brand" href="index.html">Real Confecções</a>
+
+		<ul class="navbar-nav mr-auto">
+		<li class="nav-item active::marker">
+			<a class="nav-link" href="index.html">Página Inicial</a>
+		</li>
+		<li class="nav-item dropdown">
+		      <a class="nav-link dropdown-toggle" href="categorias.html" id="navbardrop" data-toggle="dropdown">
+		        Categorias
+		      </a>
+		      <div class="dropdown-menu" style="text-align: center">
+		        <a class="dropdown-item" href="conjunto_de_cozinha.html">Cozinha</a>
+		        <a class="dropdown-item" href="jogos_de_banheiro.html">Banheiro</a>
+		        <a class="dropdown-item" href="tapetes_avulsos.html">Tapetes</a>
+		        <a class="dropdown-item" href="outros.html">Outros</a>
+		      </div>
+		    </li>
+		<li class="nav-item active:marker">
+			<a class="nav-link" href="personalizep1.html">Personalize
+			</a>
+		</li>
+		<li class="nav-item active::marker">
+			<a class="nav-link" href="contato.html">Contato
+			</a>
+		</li>
+		<li class="nav-item active::marker">
+			<a class="nav-link" href="sobre.html">Sobre
+			</a>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="" id="navbardrop" data-toggle="dropdown">
+			  Suporte
+			</a>
+			<div class="dropdown-menu" style="text-align: center">
+			  <a class="dropdown-item" href="ajuda.html">Ajuda</a>
+			  <a class="dropdown-item" href="termos_condicoes.html">Termos e condições de uso</a>
+			  <a class="dropdown-item" href="politica_privacidade.html">Política de privacidade</a>
+			</div>
+		</li>
+
+		<ul class="navbar-nav mr-auto" style="margin-left: 231px;">
+
+		<li class="nav-item dropdown">
+		      <a class="nav-link dropdown-toggle" href="perfil.html" id="navbardrop" data-toggle="dropdown">
+		      	<span class="fa fa-user-o"></span>
+		      </a>
+		      <div class="dropdown-menu">
+		        <a class="dropdown-item" href="meus_pedidos.html"><span class="fa fa-sign-in"></span>&nbsp;Login</a>
+		        <a class="dropdown-item" href="cadastro_usuario.html"><span class="fa fa-user-plus"></span>&nbsp;Cadastro de usuário</a>
+                <a class="dropdown-item" href="perfil.html"><span class="fa fa-vcard">&nbsp;Meu perfil</span></a>
+                <a class="dropdown-item" href="meus_pedidos.html"><span class="fa fa-tasks"></span>&nbsp;Meus pedidos</a>
+		        <a class="dropdown-item" href="login_usuario.html"><span class="fa fa-sign-out"></span>&nbsp;Sair</a>
+		      </div>
+		    </li>	
+
+			<form class="form-inline">
+				<input class="form-control mr-sm-2" type="text" placeholder="Procurar">
+				<a button class="btn btn-secondary" type="submit" href="todos_produtos.html"><span class="fa fa-search"></span></button></a>
+			  </form>
+		  
+		  <li class="nav-item">
+			<a class="nav-link" href="carrinho.html">
+				<span class="fa fa-cart-arrow-down"></span>
+					<span class="badge badge-secondary">4</span>
+			</a>
+		</li>
+		</ul>
+  	</ul>
+</div>
+
+	</nav>
+
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="personalizep1.html" style="color: black;">Passo 1</a></li>
+		<li class="breadcrumb-item active">Passo 2</a></li>
+	</ol>
+
+	<main class="container-fluid">
+		<form action="personalizep3.html" style="text-align: center; margin-top: 50px;">
+			<p><h2>Estampa:</h2></p>
+			<br>
+			<input type="file" id="upload" class="form-control btn btn-primary" style="width: 110px; text-align: center;" accept="image/*">
+			<br>
+			<br>
+			<img id="img" style="width: 500px; border-style: solid; border-radius: 5px; border-width: 1px; border-color: white;">
+			<br>
+			<br>
+			<br>			
+			<button class="btn btn-primary">Próximo&nbsp<span class="fa fa-arrow-circle-right"></span></button>
+		</div>
+		</form>
+	</main>
+	<div class="progress" style="margin-top: 105px;">
+  		<div class="progress-bar" style="width:50%">50%</div>
+	 </div>
+
+	<footer class="container-fluid" style="text-align: center; margin-top: 25px;">
+		<hr>
+		<p>
+			@<a href="https://www.instagram.com/gabriel.olra/?hl=pt-br" target="_blank" style="color: black;">gabriel.olra</a>
+			&
+			@<a href="https://www.instagram.com/dayanesantana18/" target="_blank" style="color: black;">dayanesantana18</a>
+		</p>
+	</footer>
+
+</body>
+</html>

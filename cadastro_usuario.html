@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cadastro de usuário</title>
+	<meta charset="utf-8">
+	<link rel="icon" href="images/carretel.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<style>
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			/* display: none; <- Crashes Chrome on hover */
+			-webkit-appearance: none;
+			margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+		}
+		
+		input[type=number] {
+			-moz-appearance:textfield;
+		}
+		
+	</style>
+	<script>
+		$( function() {
+			$(".inputradio").checkboxradio();
+		} );
+	</script>
+	
+</head>
+<body style="padding-top: 100px; background-color: lightslategrey;">
+	
+	<nav class = "navbar navbar-expand-md fixed-top navbar-dark bg-dark" style="margin-bottom: 500px;">
+
+		<img src="images/carretel.png" style="width: 20px; height: 20px;">&nbsp;
+		<a class ="navbar-brand" href="index.html">Real Confecções</a>
+
+		<ul class="navbar-nav mr-auto">
+		<li class="nav-item active::marker">
+			<a class="nav-link" href="index.html">Página Inicial</a>
+		</li>
+		<li class="nav-item dropdown">
+		      <a class="nav-link dropdown-toggle" href="categorias.html" id="navbardrop" data-toggle="dropdown">
+		        Categorias
+		      </a>
+		      <div class="dropdown-menu" style="text-align: center">
+		        <a class="dropdown-item" href="conjunto_de_cozinha.html">Cozinha</a>
+		        <a class="dropdown-item" href="jogos_de_banheiro.html">Banheiro</a>
+		        <a class="dropdown-item" href="tapetes_avulsos.html">Tapetes</a>
+		        <a class="dropdown-item" href="outros.html">Outros</a>
+		      </div>
+		    </li>
+		<li class="nav-item active:marker">
+			<a class="nav-link" href="personalizep1.html">Personalize
+			</a>
+		</li>
+		<li class="nav-item active::marker">
+			<a class="nav-link" href="contato.html">Contato
+			</a>
+		</li>
+		<li class="nav-item active::marker">
+			<a class="nav-link" href="sobre.html">Sobre
+			</a>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="" id="navbardrop" data-toggle="dropdown">
+			  Suporte
+			</a>
+			<div class="dropdown-menu" style="text-align: center">
+			  <a class="dropdown-item" href="ajuda.html">Ajuda</a>
+			  <a class="dropdown-item" href="termos_condicoes.html">Termos e condições de uso</a>
+			  <a class="dropdown-item" href="politica_privacidade.html">Política de privacidade</a>
+			</div>
+		</li>
+
+		<ul class="navbar-nav mr-auto" style="margin-left: 231px;">
+
+		<li class="nav-item dropdown">
+		      <a class="nav-link dropdown-toggle" href="perfil.html" id="navbardrop" data-toggle="dropdown">
+		      	<span class="fa fa-user-o"></span>
+		      </a>
+		      <div class="dropdown-menu">
+		        <a class="dropdown-item" href="meus_pedidos.html"><span class="fa fa-sign-in"></span>&nbsp;Login</a>
+		        <a class="dropdown-item" href="cadastro_usuario.html"><span class="fa fa-user-plus"></span>&nbsp;Cadastro de usuário</a>
+                <a class="dropdown-item" href="perfil.html"><span class="fa fa-vcard">&nbsp;Meu perfil</span></a>
+                <a class="dropdown-item" href="meus_pedidos.html"><span class="fa fa-tasks"></span>&nbsp;Meus pedidos</a>
+		        <a class="dropdown-item" href="login_usuario.html"><span class="fa fa-sign-out"></span>&nbsp;Sair</a>
+		      </div>
+		    </li>	
+
+			<form class="form-inline">
+				<input class="form-control mr-sm-2" type="text" placeholder="Procurar">
+				<a button class="btn btn-secondary" type="submit" href="todos_produtos.html"><span class="fa fa-search"></span></button></a>
+			  </form>
+		  
+		  <li class="nav-item">
+			<a class="nav-link" href="carrinho.html">
+				<span class="fa fa-cart-arrow-down"></span>
+					<span class="badge badge-secondary">4</span>
+			</a>
+		</li>
+		</ul>
+  	</ul>
+</div>
+
+	</nav>
+		<main class="container-fluid">
+		<div style="text-align: center;">
+			<h1>Cadastrar novo usuário</h1>
+			<br>
+			 <form action="formas_de_pagamento.html" class="was-validated">
+  
+			  <div class="form-group">
+			    <label for="nome">Nome completo:</label>
+			    <input type="text" class="form-control" style="margin-left: auto; margin-right: auto; text-align: center; width: 400px;" id="nome" placeholder="Nome completo" name="nome" required>
+			    <div class="valid-feedback">Válido</div>
+			    <div class="invalid-feedback">Por favor complete este campo.</div>
+			  </div>
+  
+			  <div class="form-group">
+			    <label for="cpf">CPF:</label>
+			    <input type="text" class="form-control" maxlength="11" style="margin-left: auto; margin-right: auto; text-align: center; width: 400px;" id="cpf" placeholder="000 000 000 00" name="cpf" required onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+			    <div class="valid-feedback">Válido</div>
+			    <div class="invalid-feedback">Por favor complete este campo apenas com números.</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="ptel">Telefone:</label>
+			    <input type="text" class="form-control" maxlength="11" style="margin-left: auto; margin-right: auto; text-align: center; width: 400px;" id="tel" placeholder="00 00000 0000 " name="tel" required onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+			    <div class="valid-feedback">Válido</div>
+			    <div class="invalid-feedback">Por favor complete este campo apenas com números.</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="data">Data de nascimento:</label>
+			    <input type="date" class="form-control" style="margin-left: auto; margin-right: auto; text-align: center; width: 400px;" id="data" placeholder="Data de nascimento" name="data" required>
+			    <div class="valid-feedback">Válido</div>
+			    <div class="invalid-feedback">Por favor complete este campo.</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="email">Email:</label>
+			    <input type="email" class="form-control" style="margin-left: auto; margin-right: auto; text-align: center; width: 400px;" id="email" placeholder="@" name="email" required>
+			    <div class="valid-feedback">Válido</div>
+			    <div class="invalid-feedback">Por favor complete este campo.</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="email_c">Confirmar email:</label>
+			    <input type="email" class="form-control" style="margin-left: auto; margin-right: auto; text-align: center; width: 400px;" id="email_c" placeholder="@" name="email_c" required>
+			    <div class="valid-feedback">Válido</div>
+			    <div class="invalid-feedback">Por favor complete este campo.</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="esenha">Senha:</label>
+			    <input type="password" class="form-control" style="margin-left: auto; margin-right: auto; text-align: center; width: 400px;" id="senha" placeholder="**********" name="senha" required>
+			    <div class="valid-feedback">Válido</div>
+			    <div class="invalid-feedback">Por favor complete este campo.</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="senha_c">Confirmar senha:</label>
+			    <input type="password" class="form-control" style="margin-left: auto; margin-right: auto; text-align: center; width: 400px;" id="senha_c" placeholder="**********" name="senha_c" required>
+			    <div class="valid-feedback">Válido</div>
+			    <div class="invalid-feedback">Por favor complete este campo.</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="tip">Tipo de endereço:</label>
+			    <select name="tipo_end" class="form-control" style="margin-left: auto; margin-right: auto; text-align: center; width: 400px;">
+			    	<option value="residencial">Residencial</option>
+			    	<option value="empresarial">Empresarial</option>
+			    	<option value="outro">Outro</option>
+			    </select>
+			    <div class="valid-feedback">Válido</div>
+			    <div class="invalid-feedback">Por favor complete este campo.</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="endereco">Endereço:</label>
+			    <input type="text" class="form-control" style="margin-left: auto; margin-right: auto; text-align: center; width: 400px;" id="end" placeholder="Endereço" name="endereco" required>
+			    <div class="valid-feedback">Válido</div>
+			    <div class="invalid-feedback">Por favor complete este campo.</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="endereco">Nome do destinatário:</label>
+			    <input type="text" class="form-control" style="margin-left: auto; margin-right: auto; text-align: center; width: 400px;" id="dest" placeholder="Destinatário" name="destinario" required>
+			    <div class="valid-feedback">Válido</div>
+			    <div class="invalid-feedback">Por favor complete este campo.</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="cep">CEP:</label>
+			    <input type="text" class="form-control" maxlength="8" style="margin-left: auto; margin-right: auto; text-align: center; width: 400px;" id="cep" placeholder="00000 000" name="cep" required onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+			    <div class="valid-feedback">Válido</div>
+			    <div class="invalid-feedback">Por favor complete este campo apenas com números.</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="numero">Número:</label>
+			    <input type="text" class="form-control" maxlength="5" style="margin-left: auto; margin-right: auto; text-align: center; width: 400px;" id="num" placeholder="Número" name="numero" required onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+			    <div class="valid-feedback">Válido</div>
+			    <div class="invalid-feedback">Por favor complete este campo.</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="compl">Complemento:</label>
+			    <input type="text" class="form-control" style="margin-left: auto; margin-right: auto; text-align: center; width: 400px;" id="comp" placeholder="Complemento" name="complemento" required>
+			    <div class="valid-feedback">Válido</div>
+			    <div class="invalid-feedback">Por favor complete este campo.</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="bai">Bairro:</label>
+			    <input type="text" class="form-control" style="margin-left: auto; margin-right: auto; text-align: center; width: 400px;" id="bai" placeholder="Bairro" name="bairro" required>
+			    <div class="valid-feedback">Válido</div>
+			    <div class="invalid-feedback">Por favor complete este campo.</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="est">Estado:</label>
+			    <select name="estados" class="form-control" style="margin-left: auto; margin-right: auto; text-align: center; width: 400px;">
+			    	<option value="bahia">Bahia</option>
+			    	<option value="sergipe">Sergipe</option>
+			    </select>
+				
+				<div class="valid-feedback">Válido</div>
+				<div class="invalid-feedback">Por favor complete este campo.</div>
+			  
+			</div>
+			  
+			  <div class="form-group">
+			    <label for="mun">Município:</label>
+			    <select name="municipio" class="form-control" style="margin-left: auto; margin-right: auto; text-align: center; width: 400px;">
+			    	<option value="1">Amparo de São Francisco</option>
+			    	<option value="2">Aquidabã</option>
+			    	<option value="3">Aracaju</option>
+			    	<option value="4">Arauá</option>
+			    	<option value="5">Areia Branca</option>
+			    	<option value="6">Barra dos Coqueiros</option>
+			    	<option value="7">Boquim</option>
+			    	<option value="8">Brejo Grandeo</option>
+			    	<option value="9">Campo do Brito</option>
+			    	<option value="10">Canhoba</option>
+			    	<option value="11">Canindé de São Francisco</option>
+			    	<option value="12">Capela</option>
+			    	<option value="13">Carira</option>
+			    	<option value="14">Carmópolis</option>
+			    	<option value="15">Cedro de São João</option>
+			    	<option value="16">Cristinápolis</option>
+			    	<option value="17">Cumbe</option>
+			    	<option value="18">Divina Pastora</option>
+			    	<option value="19">Estancia</option>
+			    	<option value="20">Feira Nova</option>
+			    	<option value="21">Frei Paulo</option>
+			    	<option value="22">Gararu</option>
+			    	<option value="23">General Maynard</option>
+			    	<option value="24">Gracho Cardoso</option>
+			    	<option value="25">Ilha das Flores</option>
+			    	<option value="26">Indiaroba</option>
+			    	<option value="27">Itabaiana</option>
+			    	<option value="28">Itabaianinha</option>
+			    	<option value="29">Itabi</option>
+			    	<option value="30">Itaporanga d'Ajuda</option>
+			    	<option value="31">Japaratuba</option>
+			    	<option value="32">Japoatã</option>
+			    	<option value="33">Lagarto</option>
+			    	<option value="34">Laranjeiras</option>
+			    	<option value="35">Macambira</option>
+			    	<option value="36">Malhada dos Bois</option>
+			    	<option value="37">Malhador</option>
+			    	<option value="38">Maruim</option>
+			    	<option value="39">Moita Bonita</option>
+			    	<option value="40">Monte Alegre de Sergipe</option>
+			    	<option value="41">Muribeca</option>
+			    	<option value="42">Neópolis</option>
+			    	<option value="43">Nossa Senhora Aparecida</option>
+			    	<option value="44">Nossa Senhora da Gloria</option>
+			    	<option value="45">Nossa Senhora das Dores</option>
+			    	<option value="46">Nossa Senhora de Lourdes</option>
+			    	<option value="47">Nossa Senhora do Socorro</option>
+			    	<option value="48">Pacatuba</option>
+			    	<option value="49">Pedra Mole</option>
+			    	<option value="50">Pedrinhas</option>
+			    	<option value="51">Pinhão</option>
+			    	<option value="52">Pirambu</option>
+			    	<option value="53">Poco Redondo</option>
+			    	<option value="54">Poco Verde</option>
+			    	<option value="55">Porto da Folha</option>
+			    	<option value="56">Propriá</option>
+			    	<option value="57">Riachão do Dantas</option>
+			    	<option value="58">Riachuelo</option>
+			    	<option value="59">Ribeirópolis</option>
+			    	<option value="60">Rosário do Catete</option>
+			    	<option value="61">Salgado</option>
+			    	<option value="62">Santa Luzia do Itanhy</option>
+			    	<option value="63">Santa Rosa de Lima</option>
+			    	<option value="64">Santana do São Francisco</option>
+			    	<option value="65">Santo Amaro das Brotas</option>
+			    	<option value="66">São Cristóvão</option>
+			    	<option value="67">São Domingos</option>
+			    	<option value="68">São Francisco</option>
+			    	<option value="69">São Miguel do Aleixo</option>
+			    	<option value="70">Simão Dias</option>
+			    	<option value="71">Siriri</option>
+			    	<option value="72">Telha</option>
+			    	<option value="73">Tobias Barreto</option>
+			    	<option value="74">Tomar do Geru</option>
+			    	<option value="75">Umbaúba</option>
+			    </select>
+			    <div class="valid-feedback">Válido</div>
+			    <div class="invalid-feedback">Por favor complete este campo.</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="ref">Ponto de referência:</label>
+			    <input type="text" class="form-control" style="margin-left: auto; margin-right: auto; text-align: center; width: 400px;" id="ref" placeholder="Referência" name="referencia" required>
+			    <div class="valid-feedback">Válido</div>
+			    <div class="invalid-feedback">Por favor complete este campo.</div>
+			  </div>
+
+			  <fieldset>
+				<p>Sexo:</p>
+				<label for="radio-1">Masculino</label>
+				<input class="inputradio" type="radio" name="radio-1" id="radio-1">
+				<label for="radio-2">Feminino</label>
+				<input class="inputradio" type="radio" name="radio-1" id="radio-2">
+				<label for="radio-3">Outro</label>
+				<input  class="inputradio" type="radio" name="radio-1" id="radio-3">
+			  </fieldset>
+				
+			  <div class="form-group form-check">
+			    <label class="form-check-label">
+			      <input class="form-check-input" type="checkbox" name="remember" required> Confirmo que todos os dados estão completos
+			      <div class="valid-feedback">Válido</div>
+			      <div class="invalid-feedback">Checar esta caixa para continuar.</div>
+			    </label>
+			  </div>
+
+			  <div>
+			  	<input type="checkbox" name="ofertas_email">&nbspDesejo receber ofertas de produtos e serviços por e-mail
+			  	<br>
+			  	<input type="checkbox" name="ofertas_sms">&nbspDesejo receber ofertas de produtos e serviços por SMS
+			  	<br>
+			  </div>
+  			  <br>
+  			  <button a href="formas_de_pagamento.html" class="btn btn-primary">Continuar para pagamento&nbsp<span class="fa fa-arrow-circle-right"></span></button>
+			</form>
+
+		</main>
+
+	<footer class="container-fluid" style="text-align: center; margin-top: 50px;">
+		<hr>
+		<p>
+			@<a href="https://www.instagram.com/gabriel.olra/?hl=pt-br" target="_blank" style="color: black;">gabriel.olra</a>
+			&
+			@<a href="https://www.instagram.com/dayanesantana18/" target="_blank" style="color: black;">dayanesantana18</a>
+		</p>
+	</footer>
+
+</body>
+</html>
